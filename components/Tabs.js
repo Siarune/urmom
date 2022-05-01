@@ -2,11 +2,12 @@
 import Link from "next/link"
 import { withRouter } from "next/router"
 import styles from "../styles/tabby.module.sass"
-
-const Tabs = ({ router }) => {
+//: {router:any}
+const Tabs = ({ router } ) => {
     const {
         query: { t }
     } = router
+    // const selected: boolean, any
 
     const isTabOne = t === "1" || t == null
     const isTabTwo = t === "2"
