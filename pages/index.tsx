@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/index.module.sass";
 import Tabs from "../components/Tabs";
 
@@ -10,7 +9,7 @@ const Home: NextPage = () => {
 			<Head>
 				<title>UR MOM</title>
 				<meta name="UR MOM" content="This is what happens when I take jokes seriously." />
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" type="image/ico" href="/forg.png" />
 			</Head>
 
 
