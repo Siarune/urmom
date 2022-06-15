@@ -1,3 +1,3 @@
-A silly little sit I made for my wonderful girlfriend's birthday.
+A silly little site I made for my wonderful girlfriend's birthday.
 
 urmom6969.top
