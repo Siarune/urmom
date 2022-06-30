@@ -8,24 +8,27 @@ const Home: NextPage = () => {
 		<main className={styles.container}>
 			<Head>
 				<title>UR MOM</title>
-				<meta name="UR MOM" content="This is what happens when I take jokes seriously." />
-				<link rel="icon" type="image/ico" href="/forg.png" />
+				<meta
+					name="UR MOM"
+					content="This is what happens when I take jokes seriously."
+				/>
+				<link rel="icon" type="image/ico" href="/favicon.ico" />
 			</Head>
 
+			<div className={styles.urmom}>
+				<div className={styles.textEffect}>
+					<h1 className={styles.neon} data-text="UR MOM">
+						UR MOM
+					</h1>
 
-			<div className={styles.textEffect}>
-				<h1 className={styles.neon} data-text="UR MOM">
-					UR MOM
-				</h1>
-
-				<div className={styles.gradient}></div>
-				<div className={styles.spotlight}></div>
+					<div className={styles.gradient}></div>
+					<div className={styles.spotlight}></div>
+				</div>
 			</div>
 
 			<div className={styles.tabWrap}>
-			<Tabs />
+				<Tabs />
 			</div>
-
 		</main>
 	);
 };
