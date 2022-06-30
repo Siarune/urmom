@@ -1,9 +1,34 @@
+
+
+//Page containger
+.container 
+  display: flex
+
+  width: 100%
+  min-height: 100vh
+  max-height:fit-content
+  
+  background: black
+
+  //Alignments
+  justify-content: center
+  align-content: center
+  align-items: center
+  flex-direction: column 
+  
+
+  // //Scroll snapping
+  // scroll-snap-stype: y mandatory
+
+
+// Text effect colors
 //black, sage green, pale yellow, baby pink, lavendar, blood red
-
-
-// Change the colors
 $color1:  #E6E6FA
 $color2: #f2abb9
+
+//Header wrapper
+.urmom
+  margin-bottom: 3em
 
 .textEffect
   // height: 100vh
@@ -14,7 +39,7 @@ $color2: #f2abb9
   cursor: default
   position: relative
   
-  scroll-snap-align: start
+  // scroll-snap-align: start
 
   // The blend modes mute the colors, so let's bump them up
   filter: contrast(310%) brightness(390%)
@@ -88,7 +113,6 @@ $color2: #f2abb9
     transform: translate3d(50%, 50%, 0)
   
 
-
 //=== Pen styling, ignore
 
 // Style text
@@ -103,25 +127,12 @@ $color2: #f2abb9
     border: 1px dotted white
 
 
-.container 
-  display: flex
-  height: 100vh
-  min-height: fit-content
-  
-  background: black
-
-  //Alignments
-  justify-content: center
-  align-content: center
-  align-items: center
-  flex-direction: column 
-
-  // //Scroll snapping
-  // scroll-snap-stype: y mandatory
-
-
+//Wrapper for the external content box
 .tabWrap
-  // height:100vh
+  //Decided not to use
   // scroll-snap-align: start
   // scroll-snap-stop: always
-  margin-top: 2rem
+  
+  //Makes it not cut off the gradient border
+  margin-bottom: 2rem
+
