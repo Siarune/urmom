@@ -1,8 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-# yarn tsc
-yarn lint
-vercel
-vercel --prod
-# yarn test
+npx tsc
+npm run lint
+npm run test

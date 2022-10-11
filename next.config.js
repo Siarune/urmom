@@ -1,6 +1,9 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+// @ts-check
+const {withBlitz} = require("@blitzjs/next")
 
-module.exports = nextConfig
+/**
+ * @type {import('@blitzjs/next').BlitzConfig}
+ **/
+const config = {}
+
+module.exports = withBlitz(config)

@@ -1,4 +1,4 @@
-import styles from "../styles/tabby.module.sass"
+import styles from "styles/tabby.module.sass"
 
 export default function Explanation() {
 	return (

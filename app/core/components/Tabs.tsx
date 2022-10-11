@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { withRouter } from "next/router";
-import styles from "../styles/tabby.module.sass";
+import styles from "styles/tabby.module.sass";
 
 //Tab content components
 import Dedication from "./Dedication"
