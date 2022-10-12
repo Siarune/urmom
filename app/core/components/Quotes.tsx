@@ -1,8 +1,4 @@
 import styles from "styles/tabby.module.sass"
-import { GetStaticProps } from "next"
-// import { getQuotes } from "lib/prisma"
-// import { PrismaClient } from "@prisma/client"
-// import db from "db"
 import getQuotes from "app/quotes/queries/getQuotes"
 import { useQuery } from "@blitzjs/rpc"
 import { Suspense } from "react"
