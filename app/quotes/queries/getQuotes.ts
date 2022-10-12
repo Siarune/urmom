@@ -6,7 +6,7 @@ interface GetQuotesInput
 	extends Pick<Prisma.QuoteFindManyArgs, "where" | "orderBy" | "skip" | "take"> {}
 
 export default resolver.pipe(
-	resolver.authorize(),
+	// resolver.authorize(),
 	async ({ where, orderBy, skip = 0, take = 100 }: GetQuotesInput) => {
 		// TODO: in multi-tenant app, you must add validation to ensure correct tenant
 		const {
@@ -29,13 +29,3 @@ export default resolver.pipe(
 		}
 	}
 )
-
-// import { resolver } from "@blitzjs/rpc"
-// import db from "db"
-
-// export default resolver.pipe(
-// 	(input) => input,
-// 	async () => {
-// 		return db.quote.findMany()
-// 	}
-// )
