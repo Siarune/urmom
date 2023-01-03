@@ -1,19 +1,20 @@
 import { useMutation } from "@blitzjs/rpc"
 import createQuote from "app/quotes/mutations/createQuote"
-import styles from "styles/tabby.module.sass"
+import styles from "styles/quotes.module.sass"
 import { Form, FORM_ERROR } from "app/core/components/Form"
-import { AuthenticationError, PromiseReturnType } from "blitz"
+import { AuthenticationError } from "blitz"
 import { Submit } from "app/auth/validations"
-import LabeledTextField from "app/core/components/LabeledTextField"
+import { Field } from "react-final-form"
 
 export default function Submission() {
 	const [createquote] = useMutation(createQuote)
 	return (
 		<div className={styles.texty}>
 			<Form
-			submitText="Submit"
+			submitText="Send it!"
 			schema={Submit}
 			initialValues={{ content: "" }}
+			className={styles.form}
 			onSubmit={async (values) => {
 				try {
 					const quotes = await createquote(values)
@@ -30,7 +31,11 @@ export default function Submission() {
 				}
 			}}
 			>
-				<LabeledTextField name="content" label="Submit a Quote" placeholder="Submission" />
+				<Field className={styles.textbox}
+				       component="textarea"
+				       name="content"
+				       placeholder="Insert wacky quote here"
+				/>
 			</Form>
 		</div>
 	)

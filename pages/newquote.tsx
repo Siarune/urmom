@@ -1,20 +1,12 @@
 import { BlitzPage } from "@blitzjs/next"
-import db from "db"
+import Submission from "app/core/components/Submission"
+import styles from "styles/quotes.module.sass"
 
 const NewQuote: BlitzPage = () => {
 	return(
-		<>
-		<input type="text" placeholder="New Quote">
-
-		</input>
-		<button onClick={async () => {
-			await db.quote.create({
-				data: {
-					content: "New Quote"
-				}
-			})
-		}}></button>
-		</>
+		<main className={styles.main}>
+			<Submission />
+		</main>
 	)
 }
 
