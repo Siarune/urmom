@@ -8,6 +8,8 @@ datasource db {
 
 generator client {
     provider = "prisma-client-js"
+	//rhel-openssl added to make client compatible with Vercel
+	binaryTargets = ["native", "rhel-openssl-1.0.x"]
 }
 
 // --------------------------------------
