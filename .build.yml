@@ -4,17 +4,15 @@ packages:
     - yarn
 sources:
     - https://git.sr.ht/~siarune/urmom
-secrets:
-    - 1d4233ec-b94b-4b97-9b0e-06cb60ff182d
 tasks:
     - setup: |
         cd urmom
         yarn install
         yarn add vercel
-        yarn vercel pull --yes --environment=production -t pRjJDDbIhqiLi7vNRjkIqxYe
+        yarn pullConfig
     - build: |
         cd urmom
-        yarn vercel -t pRjJDDbIhqiLi7vNRjkIqxYe
+        yarn buildProd
     - deploy: |
         cd urmom
-        yarn vercel --prod  -t pRjJDDbIhqiLi7vNRjkIqxYe
+        yarn deploy
