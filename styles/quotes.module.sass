@@ -20,13 +20,18 @@
 		list-style: none
 
 .list
-	width: 50vw
+	width: clamp(300px, 50vw, 1000px)
 
 .form
 	display: flex
 	flex-direction: column
 	margin-top: 3rem
 
+	button
+		font-size: 1.25rem
+		padding: .25rem
+
 .textbox
-	width: 30vw
-	height: 25vh
+	font-size: 1rem
+	width: clamp(300px, 50vw, 1000px)
+	height: clamp(500px, 30vh, 1000px)
