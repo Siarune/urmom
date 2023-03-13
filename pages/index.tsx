@@ -48,7 +48,7 @@ const Home: BlitzPage = () => {
 				<h1>Anyways</h1>
 				<h2>Again, happy birthday. You make me so happy and ig this is how I show it.</h2>
 
-				<h1>For your viewing pleasure, here are <Link href="quotes"><a>some weird quotes from Emily</a></Link> (usually before passing out)</h1>
+				<h1>For your viewing pleasure, here are <Link href="quotes/"><a>some weird quotes from Emily</a></Link> (usually before passing out)</h1>
 
 			</div>
 		</div>
