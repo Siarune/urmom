@@ -2,6 +2,7 @@
 	"name": "urmom",
 	"version": "1.0.0",
 	"license": "GPL-3.0",
+	"packageManager": "pnpm@7.28.0",
 	"scripts": {
 		"dev": "blitz dev",
 		"build": "blitz build",
