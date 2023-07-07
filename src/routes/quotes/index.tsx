@@ -3,11 +3,8 @@ import { For } from "solid-js"
 import { useRouteData } from "solid-start"
 import { Form } from "solid-start/data/Form"
 import { createServerAction$, createServerData$ } from "solid-start/server/server"
-import { db } from "~/db"
-import { quotes } from "~/db/schema"
+import db, { quotes } from "db"
 import styles from "~/routes/quotes/index.module.sass"
-
-// import Form
 
 export function routeData() {
 	return createServerData$(() =>
@@ -21,7 +18,7 @@ export function routeData() {
 export default function Quotes() {
 
 	const [_, { Form }] =
-		createServerAction$(async ( form: FormData, { request } ) => {
+		createServerAction$(async ( form: FormData ) => {
 			const Content = await form.get("content") as string
 			await db.insert(quotes).values({ content: Content })
 			return (() => console.log("success"))
@@ -32,7 +29,6 @@ export default function Quotes() {
 	return (
 		<main class={styles.main}>
 
-			{/*<Submission />*/}
 			<Form class={styles.form}>
 				<input name="content" id="content" type="text" />
 				<input type="submit" value={"Send it!"} />
@@ -50,19 +46,3 @@ export default function Quotes() {
 		</main>
 	)
 }
-
-// function Submission() {
-// 	const [_, { Form }] =
-// 		createServerAction$(async (form: FormData, { request }) => {
-// 		const Content = await form.get("content") as string
-// 		await db.insert(quotes).values({ content: Content })
-// 			return (()=> console.log("success"))
-// 	});
-//
-// 	return (
-// 		<Form class={styles.form}>
-// 			<input name="content" id="content" type="text" />
-// 			<input type="submit" value={"Send it!"} />
-// 		</Form>
-// 	)
-// }

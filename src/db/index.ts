@@ -1,6 +1,14 @@
 import { drizzle } from 'drizzle-orm/postgres-js';
+import { boolean, pgTable, serial, text } from "drizzle-orm/pg-core"
 import postgres from 'postgres';
 import 'dotenv/config'
 
 const client = postgres(process.env.DATABASE_URL as string);
-export const db = drizzle(client);
+const db = drizzle(client);
+export default db
+
+export const quotes = pgTable("quotes", {
+	id: serial("id").primaryKey().notNull(),
+	content: text("content").notNull(),
+	public: boolean("public").default(true).notNull(),
+});
