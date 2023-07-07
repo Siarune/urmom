@@ -1,0 +1,50 @@
+// Text effect colors
+//black, sage green, pale yellow, baby pink, lavender, blood red
+$color1: #E6E6FA
+$color2: #f2abb9
+
+.main
+	display: flex
+	width: 100%
+	min-height: 100vh
+	max-height: fit-content
+	background: black
+	//Alignments
+	justify-content: center
+	align-content: center
+	align-items: center
+	flex-direction: column
+
+
+//Header
+.urmom
+	//margin-bottom: 3em
+
+	h1
+		color: transparent !important
+		font-size: 10em
+		text-align: center
+		-webkit-text-stroke-color: transparent !important
+		-webkit-text-stroke-width: .05em
+		background-image: linear-gradient(to right, #09f1b8, #00a2ff, #ff00d2, #fed90f)
+		background-clip: text
+
+	@media(max-width: 767px)
+		font-size: .5em
+
+
+
+//Wrapper for the external content box
+.texty
+	color: white
+	width: 50vw
+	margin-bottom: 2rem
+
+	h1
+		text-align: center
+
+	a
+		text-decoration: underline
+
+	@media(max-width: 767px)
+		width: 95vw
