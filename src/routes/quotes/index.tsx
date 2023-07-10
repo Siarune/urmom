@@ -3,7 +3,7 @@ import { For } from "solid-js"
 import { useRouteData } from "solid-start"
 import { Form } from "solid-start/data/Form"
 import { createServerAction$, createServerData$ } from "solid-start/server/server"
-import db, { quotes } from "db"
+import db, { quotes } from "~/db"
 import styles from "~/routes/quotes/index.module.sass"
 
 export function routeData() {
