@@ -23,3 +23,6 @@ gitignore
 .DS_Store
 Thumbs.db
 .env*.local
+
+.next
+.svelte-kit
