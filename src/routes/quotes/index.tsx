@@ -6,7 +6,7 @@ import { createServerAction$, createServerData$ } from "solid-start/server/serve
 import db, { quotes } from "~/db"
 import styles from "~/routes/quotes/index.module.sass"
 
-function routeData() {
+export function routeData() {
 	return createServerData$(() =>
 		db.select()
 			.from(quotes)
@@ -25,7 +25,6 @@ export default function Quotes() {
 		})
 
 	const Quotes = useRouteData<typeof routeData>()
-	// console.log(Quotes)
 
 	return (
 		<main class={styles.main}>
