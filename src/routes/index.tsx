@@ -1,17 +1,18 @@
-import { A } from "solid-start"
-import styles from "./index.module.sass"
+import { A } from "@solidjs/router"
+import "./index.css"
 
 export default function Home() {
 	return (
-		<main class={styles.main}>
-			<div class={styles.urmom}>
-					<h1 class={styles.neon} data-text="UR MOM">
+		<main class="flex flex-col w-full min-h-screen max-h-fit bg-black justify-center items-center content-center">
+			<div>
+					<h1 id="urmom" class="color-transparent text-4em sm:text-10em text-center bg-clip-text"
+					    data-text="UR MOM">
 						UR MOM
 					</h1>
 			</div>
 
-			<div class={styles.texty}>
-				<h1>Heppy Borthday Emi!!!!!!!!!!!!!</h1>
+			<div class="color-white w95vw sm:w70vw mb2rem text-2xl">
+				<h1 class="text-center">Heppy Borthday Emi!!!!!!!!!!!!!</h1>
 				<h2>
 					I love you so so much and I hope you like this silly little website.
 					<br />I know you were joking about this, but I thought it was too funny not to.
@@ -35,7 +36,7 @@ export default function Home() {
 				<h1>Anyways</h1>
 				<h2>Again, happy birthday. You make me so happy and ig this is how I show it.</h2>
 
-				<h1>For your viewing pleasure, here are <A href="quotes">some weird quotes from Emily</A> (usually
+				<h1>For your viewing pleasure, here are <A href="quotes" class="decoration-underline">some weird quotes from Emily</A> (usually
 					before passing out)</h1>
 
 			</div>

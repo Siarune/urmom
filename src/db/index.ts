@@ -1,13 +1,11 @@
-import { drizzle } from 'drizzle-orm/postgres-js';
+import { drizzle } from 'drizzle-orm/vercel-postgres';
 import { boolean, pgTable, serial, text } from "drizzle-orm/pg-core"
-import postgres from 'postgres';
-import 'dotenv/config'
+import { sql } from '@vercel/postgres';
 
-const client = postgres(process.env.DATABASE_URL as string);
-const db = drizzle(client);
-export default db
+const db = drizzle(sql)
+export default db;
 
-export const quotes = pgTable("quotes", {
+export const quotes = pgTable("urmom_quotes", {
 	id: serial("id").primaryKey().notNull(),
 	content: text("content").notNull(),
 	public: boolean("public").default(true).notNull(),
