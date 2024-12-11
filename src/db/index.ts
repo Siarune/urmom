@@ -4,7 +4,7 @@ import { pgTable, serial, text } from "drizzle-orm/pg-core"
 const db = drizzle(process.env.DB_URL!)
 export default db
 
-export const table = pgTable("table", {
+export const quotes = pgTable("quotes", {
 	id: serial().primaryKey(),
 	content: text().notNull(),
 })
