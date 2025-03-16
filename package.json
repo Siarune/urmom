@@ -15,8 +15,8 @@
 		"@solidjs/router": "^0.15.0",
 		"@solidjs/start": "^1.0.10",
 		"@unocss/reset": "^0.59.2",
+		"@vercel/postgres": "^0.10.0",
 		"drizzle-orm": "^0.38.0",
-		"pg": "^8.13.1",
 		"solid-js": "^1.9.2",
 		"vinxi": "^0.4.3",
 		"vite-plugin-oxlint": "^1.1.0"
