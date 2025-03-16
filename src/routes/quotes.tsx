@@ -2,6 +2,7 @@ import { action, createAsync, query } from "@solidjs/router"
 import db, { quotes } from "~/db"
 import { desc } from "drizzle-orm"
 import { Suspense } from "solid-js"
+import { SolidMarkdown } from "solid-markdown"
 
 export default function Quotes() {
 	let dialogRef!: HTMLDialogElement
@@ -51,11 +52,18 @@ export default function Quotes() {
 				+
 			</button>
 
-			<ul class="text-1.5rem mb0 w90vw sm:w50vw text-white">
+			<ul
+				class="text-1.5rem mb0 w90vw sm:w50vw text-white"
+				// style="white-space: wrap;"
+			>
 				<Suspense fallback={<></>}>
 					{Quotes() &&
 						Quotes()!.map((quote) => (
-							<li class="list-none pb6">{quote.content}</li>
+							<li class="list-none pb6">
+								<SolidMarkdown renderingStrategy="reconcile">
+									{quote.content}
+								</SolidMarkdown>
+							</li>
 						))}
 				</Suspense>
 			</ul>

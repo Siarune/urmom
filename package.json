@@ -12,20 +12,21 @@
 		"studio": "drizzle-kit studio"
 	},
 	"dependencies": {
-		"@solidjs/router": "^0.15.0",
-		"@solidjs/start": "^1.0.10",
-		"@unocss/reset": "^0.59.2",
+		"@solidjs/router": "^0.15.3",
+		"@solidjs/start": "^1.1.3",
+		"@unocss/reset": "^0.59.4",
 		"@vercel/postgres": "^0.10.0",
-		"drizzle-orm": "^0.38.0",
-		"solid-js": "^1.9.2",
+		"drizzle-orm": "^0.38.4",
+		"solid-js": "^1.9.5",
+		"solid-markdown": "^2.0.14",
 		"vinxi": "^0.4.3",
-		"vite-plugin-oxlint": "^1.1.0"
+		"vite-plugin-oxlint": "^1.2.3"
 	},
 	"devDependencies": {
 		"@onu-ui/preset": "^1.1.5",
-		"@types/pg": "^8.11.10",
-		"drizzle-kit": "^0.30.0",
-		"oxlint": "^0.15.0",
+		"@types/pg": "^8.11.11",
+		"drizzle-kit": "^0.30.5",
+		"oxlint": "^0.15.15",
 		"prettier": "3.4.2",
 		"solid-devtools": "^0.30.1",
 		"unocss": "^0.59.4"
