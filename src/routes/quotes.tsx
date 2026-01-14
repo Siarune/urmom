@@ -87,8 +87,7 @@ const insertQuote = action(async (formData: FormData) => {
 	await db
 		.insert(quotes)
 		.values({
-			//@ts-ignore
-			content: formData.get("content")?.toString(),
+			content: formData.get("content")!.toString(),
 		})
 		.returning()
 })
