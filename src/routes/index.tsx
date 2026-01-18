@@ -4,18 +4,20 @@ export default function Home() {
 	return (
 		<main class="flex flex-col w-full min-h-screen max-h-fit bg-black justify-center items-center content-center">
 			<div>
-				<h1
-					id="urmom"
-					class="color-transparent text-4em sm:text-10em text-center bg-clip-text"
-					data-text="UR MOM"
-					style={`
+				<A href="/quotes">
+					<h1
+						id="urmom"
+						class="color-transparent text-4em sm:text-10em text-center bg-clip-text"
+						data-text="UR MOM"
+						style={`
 						-webkit-text-stroke-color: transparent !important;
 						-webkit-text-stroke-width: .05em;
 						background-image: linear-gradient(to right, #09f1b8, #00a2ff, #ff00d2, #fed90f)
             `}
-				>
-					UR MOM
-				</h1>
+					>
+						UR MOM
+					</h1>
+				</A>
 			</div>
 
 			<div class="color-white w95vw sm:w70vw mb2rem text-2xl">
