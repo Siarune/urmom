@@ -45,17 +45,13 @@ export default function CWT() {
 
 			<button
 				onClick={() => dialogRef.showModal()}
-				class="aspect-ratio-square rounded-full bg-emerald-600 color-white font-extrabold text-8 p4 m0
-                inline-flex text-center flex-col justify-center items-center align-mid
+				class="aspect-ratio-square flex rounded-full bg-emerald-600 color-white font-extrabold text-10 p4 m0 text-center
                 pos-fixed pos-bottom-sm pos-right-sm"
 			>
-				+
+				<p class="pos-relative pos-bottom-xl">+</p>
 			</button>
 
-			<ul
-				class="text-1.5rem mb0 w90vw sm:w50vw text-white"
-				// style="white-space: wrap;"
-			>
+			<ul class="text-1.5rem mb0 mt6 w90vw sm:w50vw text-white">
 				<Suspense fallback={<></>}>
 					{Quotes() &&
 						Quotes()!.map((quote) => (
